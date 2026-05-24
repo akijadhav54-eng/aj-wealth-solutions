@@ -39,7 +39,7 @@ export const site = {
   // 1. Go to https://formspree.io and create a free account.
   // 2. Create a new form -> copy the endpoint (looks like https://formspree.io/f/abcdwxyz).
   // 3. Paste it below. Leads will arrive in your email + Formspree dashboard.
-  formspreeEndpoint: 'https://formspree.io/f/REPLACE_WITH_YOUR_ID',
+  formspreeEndpoint: 'https://formspree.io/f/mjgzoddg',
 
   // Digital / platform partner shown in footer
   partner: 'AssetPlus',
