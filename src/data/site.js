@@ -28,11 +28,11 @@ export const site = {
 
   // ----- Social links (leave '' to hide an icon) -----
   social: {
-    instagram: '',
+    instagram: 'https://www.instagram.com/akijadhav01?igsh=MTV6bXNpNGxycmh4Yw==',
     facebook: '',
-    linkedin: '',
-    youtube: '',
-    twitter: '',
+    linkedin: 'https://www.linkedin.com/in/akash-jaddhav-4a23b01ab?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    youtube: 'https://www.youtube.com/@AJ_Wealth_Solutions',
+    twitter: 'https://x.com/akijadhav54',
   },
 
   // ----- LEAD FORM ENDPOINT -----
