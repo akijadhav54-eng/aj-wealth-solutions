@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ajwealthsolutions.vercel.app/sitemap.xml
