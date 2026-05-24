@@ -1,5 +1,6 @@
-// Sticky navigation bar. Transparent over the hero, gains a navy
-// background once you scroll. Collapses into a hamburger menu on mobile.
+// Sticky navigation bar (LIGHT THEME). Transparent over the hero,
+// gains a cream background once you scroll. Collapses into a hamburger
+// menu on mobile.
 import { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Menu, X, Phone } from 'lucide-react'
@@ -37,7 +38,6 @@ export default function Navbar() {
       const id = to.replace('/#', '')
       if (location.pathname !== '/') {
         navigate('/')
-        // wait for home to render, then scroll to the section
         setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }), 300)
       } else {
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -48,7 +48,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-navy-900/95 backdrop-blur-md shadow-lg py-3' : 'bg-transparent py-5'
+        scrolled ? 'bg-cream/95 backdrop-blur-md shadow-md py-3' : 'bg-transparent py-5'
       }`}
     >
       <nav className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-16 flex items-center justify-between">
@@ -56,8 +56,8 @@ export default function Navbar() {
         <Link to="/" className="flex items-center gap-3" onClick={(e) => handleNav(e, '/')}>
           <img src="/logo.jpg" alt="AJ Wealth Solutions logo" className="h-11 w-11 rounded-full object-cover ring-1 ring-gold/40" />
           <div className="leading-tight">
-            <span className="block font-display text-lg font-semibold text-white">{site.brand}</span>
-            <span className="block text-[10px] tracking-widest text-gold uppercase">AMFI Registered</span>
+            <span className="block font-display text-lg font-semibold text-ink">{site.brand}</span>
+            <span className="block text-[10px] tracking-widest text-gold-dark uppercase">AMFI Registered</span>
           </div>
         </Link>
 
@@ -68,7 +68,7 @@ export default function Navbar() {
               <Link
                 to={link.to}
                 onClick={(e) => handleNav(e, link.to)}
-                className="text-sm font-medium text-white/80 hover:text-gold transition-colors"
+                className="text-sm font-medium text-ink/70 hover:text-gold-dark transition-colors"
               >
                 {link.label}
               </Link>
@@ -83,7 +83,7 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="lg:hidden text-white p-2"
+          className="lg:hidden text-ink p-2"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -93,14 +93,14 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden bg-navy-900/98 backdrop-blur-md border-t border-white/10">
+        <div className="lg:hidden bg-cream backdrop-blur-md border-t border-ink/10 shadow-md">
           <ul className="flex flex-col px-6 py-4 gap-1">
             {navLinks.map((link) => (
               <li key={link.label}>
                 <Link
                   to={link.to}
                   onClick={(e) => handleNav(e, link.to)}
-                  className="block py-3 text-white/85 hover:text-gold border-b border-white/5"
+                  className="block py-3 text-ink/80 hover:text-gold-dark border-b border-ink/5"
                 >
                   {link.label}
                 </Link>

@@ -111,7 +111,7 @@ export default function EnquiryForm() {
             'Get My Free Consultation'
           )}
         </button>
-        <p className="text-center text-xs text-white/40">
+        <p className="text-center text-xs text-ink/40">
           Your details are private and used only to contact you about your investment goals.
         </p>
       </form>
@@ -125,13 +125,13 @@ export default function EnquiryForm() {
             onClick={() => setShowPopup(false)}
           >
             <motion.div
-              className="bg-navy-700 ring-1 ring-gold/30 rounded-3xl p-8 sm:p-10 max-w-md text-center"
+              className="bg-white ring-1 ring-gold/30 rounded-3xl p-8 sm:p-10 max-w-md text-center"
               initial={{ scale: 0.85, y: 20 }} animate={{ scale: 1, y: 0 }} exit={{ scale: 0.85, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
             >
-              <CheckCircle2 className="mx-auto text-gold" size={64} />
-              <h3 className="font-display text-2xl text-white mt-5">Thank you!</h3>
-              <p className="text-white/70 mt-3">
+              <CheckCircle2 className="mx-auto text-gold-dark" size={64} />
+              <h3 className="font-display text-2xl text-ink mt-5">Thank you!</h3>
+              <p className="text-ink/70 mt-3">
                 Your enquiry has been received. {site.owner} will reach out to you shortly to
                 plan your investment journey.
               </p>
@@ -148,8 +148,8 @@ export default function EnquiryForm() {
 function Field({ icon: Icon, label, error, children }) {
   return (
     <label className="block">
-      <span className="flex items-center gap-2 text-sm text-white/70 mb-2">
-        <Icon size={15} className="text-gold" /> {label}
+      <span className="flex items-center gap-2 text-sm text-ink/70 mb-2">
+        <Icon size={15} className="text-gold-dark" /> {label}
       </span>
       {children}
       {error && <span className="block text-red-400 text-xs mt-1.5">{error}</span>}

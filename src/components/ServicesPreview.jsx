@@ -14,7 +14,7 @@ export default function ServicesPreview() {
         <h2 className="font-display text-3xl sm:text-4xl font-semibold">
           Solutions for every <span className="text-gradient-gold">financial goal</span>
         </h2>
-        <p className="text-white/65 mt-4">
+        <p className="text-ink/65 mt-4">
           From your first SIP to a complete retirement plan — we’ve got a solution tailored to you.
         </p>
       </Reveal>

@@ -20,7 +20,7 @@ export default function Contact() {
           <h1 className="font-display text-4xl sm:text-5xl font-semibold">
             Start your <span className="text-gradient-gold">investment journey</span>
           </h1>
-          <p className="text-white/65 mt-5 max-w-2xl mx-auto">
+          <p className="text-ink/65 mt-5 max-w-2xl mx-auto">
             Fill the form and {site.owner} will get back to you personally — usually within a few hours.
           </p>
         </Reveal>
@@ -30,8 +30,8 @@ export default function Contact() {
         <div className="grid lg:grid-cols-5 gap-8">
           {/* Form */}
           <Reveal className="lg:col-span-3">
-            <div className="rounded-3xl bg-navy-700/40 ring-1 ring-white/10 p-7 sm:p-9">
-              <h2 className="font-display text-2xl text-white mb-6">Enquiry Form</h2>
+            <div className="rounded-3xl bg-white ring-1 ring-ink/10 p-7 sm:p-9">
+              <h2 className="font-display text-2xl text-ink mb-6">Enquiry Form</h2>
               <EnquiryForm />
             </div>
           </Reveal>
@@ -49,10 +49,10 @@ export default function Contact() {
               <ContactCard icon={Mail} title="Email" value={site.email} href={`mailto:${site.email}`} />
               <ContactCard icon={MapPin} title="Office" value={site.address} />
               <div className="rounded-2xl bg-gold/10 ring-1 ring-gold/30 p-6 flex items-start gap-3">
-                <Clock size={20} className="text-gold shrink-0 mt-0.5" />
+                <Clock size={20} className="text-gold-dark shrink-0 mt-0.5" />
                 <div>
-                  <div className="font-semibold text-white">Available</div>
-                  <p className="text-white/65 text-sm mt-1">Mon – Sat, 9:00 AM – 8:00 PM</p>
+                  <div className="font-semibold text-ink">Available</div>
+                  <p className="text-ink/65 text-sm mt-1">Mon – Sat, 9:00 AM – 8:00 PM</p>
                 </div>
               </div>
             </div>
@@ -65,13 +65,13 @@ export default function Contact() {
 
 function ContactCard({ icon: Icon, title, value, href }) {
   const inner = (
-    <div className="flex items-center gap-4 rounded-2xl bg-navy-700/40 ring-1 ring-white/10 p-5 hover:ring-gold/40 transition-all">
-      <div className="h-12 w-12 rounded-xl bg-gold/15 text-gold flex items-center justify-center shrink-0">
+    <div className="flex items-center gap-4 rounded-2xl bg-white ring-1 ring-ink/10 p-5 hover:ring-gold/40 transition-all">
+      <div className="h-12 w-12 rounded-xl bg-gold/15 text-gold-dark flex items-center justify-center shrink-0">
         <Icon size={22} />
       </div>
       <div className="min-w-0">
-        <div className="text-xs uppercase tracking-wider text-gold">{title}</div>
-        <div className="text-white/85 text-sm mt-0.5 break-words">{value}</div>
+        <div className="text-xs uppercase tracking-wider text-gold-dark">{title}</div>
+        <div className="text-ink/85 text-sm mt-0.5 break-words">{value}</div>
       </div>
     </div>
   )

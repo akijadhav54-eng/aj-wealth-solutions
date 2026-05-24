@@ -20,35 +20,35 @@ export default function ServiceCard({ service, detailed = false }) {
   const Icon = iconMap[service.icon] || Sparkles
 
   return (
-    <div className="group relative h-full rounded-2xl bg-navy-700/40 ring-1 ring-white/10 p-7 transition-all duration-300 hover:ring-gold/50 hover:-translate-y-1 hover:shadow-card">
+    <div className="group relative h-full rounded-2xl bg-white ring-1 ring-ink/10 p-7 transition-all duration-300 hover:ring-gold/50 hover:-translate-y-1 hover:shadow-card">
       {/* Icon */}
-      <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gold/15 text-gold ring-1 ring-gold/30 transition-colors group-hover:bg-gold group-hover:text-navy-900">
+      <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gold/15 text-gold-dark ring-1 ring-gold/30 transition-colors group-hover:bg-gold group-hover:text-navy-900">
         <Icon size={26} />
       </div>
 
-      <h3 className="font-display text-xl text-white mt-5">{service.title}</h3>
-      <p className="text-white/65 text-sm mt-3 leading-relaxed">{service.description}</p>
+      <h3 className="font-display text-xl text-ink mt-5">{service.title}</h3>
+      <p className="text-ink/65 text-sm mt-3 leading-relaxed">{service.description}</p>
 
       {/* Detailed view: benefits + ideal investor + CTA */}
       {detailed && (
         <>
           <ul className="mt-5 space-y-2">
             {service.benefits.map((b) => (
-              <li key={b} className="flex items-start gap-2 text-sm text-white/75">
-                <Check size={16} className="text-gold shrink-0 mt-0.5" />
+              <li key={b} className="flex items-start gap-2 text-sm text-ink/75">
+                <Check size={16} className="text-gold-dark shrink-0 mt-0.5" />
                 <span>{b}</span>
               </li>
             ))}
           </ul>
 
-          <div className="mt-5 rounded-lg bg-navy-900/50 px-4 py-3">
-            <span className="text-[11px] uppercase tracking-wider text-gold">Ideal for</span>
-            <p className="text-sm text-white/70 mt-1">{service.idealFor}</p>
+          <div className="mt-5 rounded-lg bg-cream px-4 py-3">
+            <span className="text-[11px] uppercase tracking-wider text-gold-dark">Ideal for</span>
+            <p className="text-sm text-ink/70 mt-1">{service.idealFor}</p>
           </div>
 
           <Link
             to="/contact"
-            className="mt-6 inline-flex items-center gap-1.5 text-gold font-semibold text-sm hover:gap-3 transition-all"
+            className="mt-6 inline-flex items-center gap-1.5 text-gold-dark font-semibold text-sm hover:gap-3 transition-all"
           >
             Get Started <ArrowRight size={16} />
           </Link>

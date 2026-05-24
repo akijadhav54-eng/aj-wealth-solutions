@@ -37,7 +37,7 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-us" className="bg-navy-900/60">
+    <section id="why-us" className="bg-cream">
       <div className="section">
         <Reveal className="text-center max-w-2xl mx-auto">
           <span className="eyebrow">Why Choose Us</span>
@@ -49,13 +49,13 @@ export default function WhyChooseUs() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           {reasons.map((r, i) => (
             <Reveal key={r.title} delay={i * 0.07}>
-              <div className="flex gap-4 rounded-2xl bg-navy-700/40 ring-1 ring-white/10 p-6 h-full hover:ring-gold/40 transition-all">
-                <div className="shrink-0 h-12 w-12 rounded-xl bg-gold/15 text-gold flex items-center justify-center">
+              <div className="flex gap-4 rounded-2xl bg-white ring-1 ring-ink/10 p-6 h-full hover:ring-gold/40 transition-all">
+                <div className="shrink-0 h-12 w-12 rounded-xl bg-gold/15 text-gold-dark flex items-center justify-center">
                   <r.icon size={22} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-white">{r.title}</h3>
-                  <p className="text-white/60 text-sm mt-1.5 leading-relaxed">{r.text}</p>
+                  <h3 className="font-semibold text-ink">{r.title}</h3>
+                  <p className="text-ink/60 text-sm mt-1.5 leading-relaxed">{r.text}</p>
                 </div>
               </div>
             </Reveal>

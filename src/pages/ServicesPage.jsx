@@ -22,7 +22,7 @@ export default function ServicesPage() {
           <h1 className="font-display text-4xl sm:text-5xl font-semibold">
             Everything you need to <span className="text-gradient-gold">grow your wealth</span>
           </h1>
-          <p className="text-white/65 mt-5 max-w-2xl mx-auto">
+          <p className="text-ink/65 mt-5 max-w-2xl mx-auto">
             Whatever your goal, there’s a tailored solution waiting. Each plan is built around
             your life — not a one-size-fits-all product.
           </p>
@@ -43,12 +43,12 @@ export default function ServicesPage() {
       {/* CTA banner */}
       <section className="px-5 sm:px-8 lg:px-16 max-w-7xl mx-auto pb-24">
         <Reveal>
-          <div className="rounded-3xl bg-gradient-to-br from-navy-700 to-navy-900 ring-1 ring-gold/20 p-10 sm:p-14 text-center relative overflow-hidden">
+          <div className="rounded-3xl bg-gradient-to-br from-gold/15 to-cream ring-1 ring-gold/20 p-10 sm:p-14 text-center relative overflow-hidden">
             <div className="absolute -top-20 -right-20 h-60 w-60 rounded-full bg-gold/10 blur-3xl" />
             <h2 className="font-display text-3xl sm:text-4xl font-semibold relative">
               Not sure where to <span className="text-gradient-gold">start?</span>
             </h2>
-            <p className="text-white/70 mt-4 max-w-xl mx-auto relative">
+            <p className="text-ink/70 mt-4 max-w-xl mx-auto relative">
               Book a free, no-obligation consultation. We’ll figure out the right first step together.
             </p>
             <Link to="/contact" className="btn-gold mt-8 relative">

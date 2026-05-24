@@ -23,19 +23,19 @@ export default function BlogPost() {
       <SEO title={`${post.title} | AJ Wealth Solutions`} description={post.excerpt} path={`/blog/${post.slug}`} />
 
       <article className="pt-36 pb-16 px-5 sm:px-8 lg:px-16 max-w-3xl mx-auto">
-        <Link to="/blog" className="inline-flex items-center gap-2 text-gold text-sm hover:gap-3 transition-all">
+        <Link to="/blog" className="inline-flex items-center gap-2 text-gold-dark text-sm hover:gap-3 transition-all">
           <ArrowLeft size={16} /> All articles
         </Link>
 
         <Reveal>
           <span className="eyebrow mt-6">{post.category}</span>
           <h1 className="font-display text-3xl sm:text-4xl font-semibold leading-tight">{post.title}</h1>
-          <div className="flex items-center gap-4 text-white/40 text-sm mt-4">
+          <div className="flex items-center gap-4 text-ink/40 text-sm mt-4">
             <span className="flex items-center gap-1.5"><CalendarDays size={15} /> {post.date}</span>
             <span className="flex items-center gap-1.5"><Clock size={15} /> {post.readTime}</span>
           </div>
 
-          <div className="aspect-[2/1] rounded-2xl bg-gradient-to-br from-navy-600 to-navy-900 ring-1 ring-white/5 flex items-center justify-center my-8">
+          <div className="aspect-[2/1] rounded-2xl bg-gradient-to-br from-gold/10 to-cream ring-1 ring-ink/5 flex items-center justify-center my-8">
             <span className="text-gold/40 font-display text-5xl">AJ</span>
           </div>
 
@@ -43,9 +43,9 @@ export default function BlogPost() {
           <BlogContent content={post.content} />
 
           {/* CTA box */}
-          <div className="rounded-2xl bg-gradient-to-br from-navy-700 to-navy-900 ring-1 ring-gold/20 p-7 mt-10 text-center">
-            <h3 className="font-display text-xl text-white">Ready to start your journey?</h3>
-            <p className="text-white/65 text-sm mt-2">Book a free, no-pressure consultation with {site.owner}.</p>
+          <div className="rounded-2xl bg-gradient-to-br from-gold/15 to-cream ring-1 ring-gold/20 p-7 mt-10 text-center">
+            <h3 className="font-display text-xl text-ink">Ready to start your journey?</h3>
+            <p className="text-ink/65 text-sm mt-2">Book a free, no-pressure consultation with {site.owner}.</p>
             <div className="flex flex-wrap justify-center gap-3 mt-5">
               <Link to="/contact" className="btn-gold">Book Free Consultation</Link>
               <a
@@ -62,13 +62,13 @@ export default function BlogPost() {
       {/* Read next */}
       {others.length > 0 && (
         <section className="px-5 sm:px-8 lg:px-16 max-w-3xl mx-auto pb-24">
-          <h3 className="font-display text-2xl text-white mb-6">Read next</h3>
+          <h3 className="font-display text-2xl text-ink mb-6">Read next</h3>
           <div className="grid sm:grid-cols-2 gap-5">
             {others.map((p) => (
-              <Link key={p.slug} to={`/blog/${p.slug}`} className="group block rounded-2xl bg-navy-700/40 ring-1 ring-white/10 p-6 hover:ring-gold/40 transition-all">
+              <Link key={p.slug} to={`/blog/${p.slug}`} className="group block rounded-2xl bg-white ring-1 ring-ink/10 p-6 hover:ring-gold/40 transition-all">
                 <span className="eyebrow !mb-2">{p.category}</span>
-                <h4 className="font-display text-lg text-white group-hover:text-gold transition-colors leading-snug">{p.title}</h4>
-                <span className="inline-flex items-center gap-1.5 text-gold text-sm font-semibold mt-3 group-hover:gap-3 transition-all">
+                <h4 className="font-display text-lg text-ink group-hover:text-gold-dark transition-colors leading-snug">{p.title}</h4>
+                <span className="inline-flex items-center gap-1.5 text-gold-dark text-sm font-semibold mt-3 group-hover:gap-3 transition-all">
                   Read <ArrowRight size={15} />
                 </span>
               </Link>

@@ -1,6 +1,6 @@
-// Hero section — the first thing visitors see.
-// Big headline, the three CTAs you asked for, and a decorative
-// animated "orbit" that echoes the cycle motif in your logo.
+// Hero section (LIGHT THEME) — the first thing visitors see.
+// Light cream background, deep-navy text, gold accents, and a
+// decorative animated "orbit" that echoes the cycle motif in your logo.
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, CalendarCheck, MessageCircle } from 'lucide-react'
@@ -9,15 +9,15 @@ import { site } from '../data/site'
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-28 pb-16">
-      {/* Background atmosphere: radial glows + subtle grid */}
+      {/* Background atmosphere: soft gold glows + subtle grid */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 -left-32 h-96 w-96 rounded-full bg-gold/10 blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-navy-600/40 blur-3xl" />
+        <div className="absolute top-1/4 -left-32 h-96 w-96 rounded-full bg-gold/15 blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-gold-light/10 blur-3xl" />
         <div
           className="absolute inset-0 opacity-[0.04]"
           style={{
             backgroundImage:
-              'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)',
+              'linear-gradient(#10133a 1px, transparent 1px), linear-gradient(90deg, #10133a 1px, transparent 1px)',
             backgroundSize: '60px 60px',
           }}
         />
@@ -36,7 +36,7 @@ export default function Hero() {
           </motion.span>
 
           <motion.h1
-            className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.1]"
+            className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.1] text-ink"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -46,7 +46,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p
-            className="mt-6 text-base sm:text-lg text-white/70 max-w-xl"
+            className="mt-6 text-base sm:text-lg text-ink/70 max-w-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -81,7 +81,7 @@ export default function Hero() {
 
           {/* Trust strip */}
           <motion.div
-            className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-white/60"
+            className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-ink/60"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -101,11 +101,11 @@ export default function Hero() {
         >
           <div className="relative h-72 w-72 sm:h-96 sm:w-96">
             {/* rotating gold ring */}
-            <div className="absolute inset-0 rounded-full border-2 border-dashed border-gold/40 animate-spin-slow" />
-            <div className="absolute inset-6 rounded-full border border-gold/20" />
+            <div className="absolute inset-0 rounded-full border-2 border-dashed border-gold/50 animate-spin-slow" />
+            <div className="absolute inset-6 rounded-full border border-gold/25" />
             {/* center logo */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="h-40 w-40 sm:h-52 sm:w-52 rounded-full bg-navy-700/60 backdrop-blur ring-1 ring-gold/30 shadow-gold flex items-center justify-center overflow-hidden">
+              <div className="h-40 w-40 sm:h-52 sm:w-52 rounded-full bg-white ring-1 ring-gold/30 shadow-gold flex items-center justify-center overflow-hidden">
                 <img src="/logo.jpg" alt="AJ Wealth Solutions" className="h-full w-full object-cover" />
               </div>
             </div>

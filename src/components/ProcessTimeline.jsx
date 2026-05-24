@@ -38,7 +38,7 @@ export default function ProcessTimeline() {
         <h2 className="font-display text-3xl sm:text-4xl font-semibold">
           A simple, <span className="text-gradient-gold">disciplined</span> process
         </h2>
-        <p className="text-white/65 mt-4">Four clear steps from first hello to a growing portfolio.</p>
+        <p className="text-ink/65 mt-4">Four clear steps from first hello to a growing portfolio.</p>
       </Reveal>
 
       <div className="relative mt-14">
@@ -49,14 +49,14 @@ export default function ProcessTimeline() {
           {steps.map((s, i) => (
             <Reveal key={s.step} delay={i * 0.12}>
               <div className="relative text-center lg:text-left">
-                <div className="relative z-10 mx-auto lg:mx-0 h-20 w-20 rounded-2xl bg-navy-700 ring-1 ring-gold/30 flex items-center justify-center text-gold">
+                <div className="relative z-10 mx-auto lg:mx-0 h-20 w-20 rounded-2xl bg-white ring-1 ring-gold/30 flex items-center justify-center text-gold-dark">
                   <s.icon size={30} />
                   <span className="absolute -top-3 -right-3 h-8 w-8 rounded-full bg-gold text-navy-900 text-sm font-bold flex items-center justify-center">
                     {s.step}
                   </span>
                 </div>
-                <h3 className="font-display text-xl text-white mt-5">{s.title}</h3>
-                <p className="text-white/60 text-sm mt-2 leading-relaxed">{s.text}</p>
+                <h3 className="font-display text-xl text-ink mt-5">{s.title}</h3>
+                <p className="text-ink/60 text-sm mt-2 leading-relaxed">{s.text}</p>
               </div>
             </Reveal>
           ))}

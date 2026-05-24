@@ -34,13 +34,13 @@ export default function SIPCalculator() {
         <h2 className="font-display text-3xl sm:text-4xl font-semibold">
           SIP <span className="text-gradient-gold">Calculator</span>
         </h2>
-        <p className="text-white/65 mt-4">
+        <p className="text-ink/65 mt-4">
           See how small, consistent investments can grow into something big.
         </p>
       </Reveal>
 
       <Reveal delay={0.1}>
-        <div className="mt-12 grid lg:grid-cols-2 gap-8 rounded-3xl bg-navy-700/40 ring-1 ring-white/10 p-7 sm:p-10">
+        <div className="mt-12 grid lg:grid-cols-2 gap-8 rounded-3xl bg-white ring-1 ring-ink/10 p-7 sm:p-10">
           {/* Sliders */}
           <div className="space-y-8">
             <SliderRow
@@ -64,32 +64,32 @@ export default function SIPCalculator() {
           </div>
 
           {/* Results */}
-          <div className="flex flex-col justify-center rounded-2xl bg-navy-900/50 p-7">
-            <div className="flex items-center gap-2 text-gold mb-6">
+          <div className="flex flex-col justify-center rounded-2xl bg-cream p-7">
+            <div className="flex items-center gap-2 text-gold-dark mb-6">
               <Calculator size={20} />
               <span className="text-sm font-semibold uppercase tracking-wider">Projected Value</span>
             </div>
 
-            <div className="font-display text-4xl sm:text-5xl text-white">{inr(future)}</div>
-            <p className="text-white/50 text-sm mt-1">Estimated maturity amount</p>
+            <div className="font-display text-4xl sm:text-5xl text-ink">{inr(future)}</div>
+            <p className="text-ink/50 text-sm mt-1">Estimated maturity amount</p>
 
             {/* Split bar */}
-            <div className="mt-6 h-3 rounded-full bg-white/10 overflow-hidden flex">
-              <div className="h-full bg-white/40" style={{ width: `${investedPct}%` }} />
+            <div className="mt-6 h-3 rounded-full bg-ink/10 overflow-hidden flex">
+              <div className="h-full bg-ink/40" style={{ width: `${investedPct}%` }} />
               <div className="h-full bg-gold" style={{ width: `${100 - investedPct}%` }} />
             </div>
             <div className="flex justify-between text-sm mt-4">
               <div>
-                <div className="flex items-center gap-2 text-white/60">
-                  <span className="h-2.5 w-2.5 rounded-full bg-white/40" /> Invested
+                <div className="flex items-center gap-2 text-ink/60">
+                  <span className="h-2.5 w-2.5 rounded-full bg-ink/40" /> Invested
                 </div>
-                <div className="text-white font-semibold mt-1">{inr(invested)}</div>
+                <div className="text-ink font-semibold mt-1">{inr(invested)}</div>
               </div>
               <div className="text-right">
-                <div className="flex items-center gap-2 text-white/60 justify-end">
+                <div className="flex items-center gap-2 text-ink/60 justify-end">
                   Est. Gains <span className="h-2.5 w-2.5 rounded-full bg-gold" />
                 </div>
-                <div className="text-gold font-semibold mt-1">{inr(gains)}</div>
+                <div className="text-gold-dark font-semibold mt-1">{inr(gains)}</div>
               </div>
             </div>
 
@@ -98,7 +98,7 @@ export default function SIPCalculator() {
             </Link>
           </div>
         </div>
-        <p className="text-center text-xs text-white/40 mt-4 max-w-2xl mx-auto">
+        <p className="text-center text-xs text-ink/40 mt-4 max-w-2xl mx-auto">
           *For illustration only. Returns are assumed and not guaranteed. Mutual fund investments
           are subject to market risks.
         </p>
@@ -112,8 +112,8 @@ function SliderRow({ label, value, min, max, step, raw, onChange }) {
   return (
     <div>
       <div className="flex items-center justify-between mb-3">
-        <span className="text-white/70 text-sm">{label}</span>
-        <span className="rounded-lg bg-gold/15 text-gold font-semibold px-3 py-1 text-sm">{value}</span>
+        <span className="text-ink/70 text-sm">{label}</span>
+        <span className="rounded-lg bg-gold/15 text-gold-dark font-semibold px-3 py-1 text-sm">{value}</span>
       </div>
       <input
         type="range"

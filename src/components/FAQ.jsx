@@ -23,13 +23,13 @@ export default function FAQ() {
           const isOpen = open === i
           return (
             <Reveal key={faq.q} delay={i * 0.05}>
-              <div className="rounded-2xl bg-navy-700/40 ring-1 ring-white/10 overflow-hidden">
+              <div className="rounded-2xl bg-white ring-1 ring-ink/10 overflow-hidden">
                 <button
                   onClick={() => setOpen(isOpen ? -1 : i)}
                   className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left"
                 >
-                  <span className="font-medium text-white">{faq.q}</span>
-                  <span className="shrink-0 text-gold">{isOpen ? <Minus size={20} /> : <Plus size={20} />}</span>
+                  <span className="font-medium text-ink">{faq.q}</span>
+                  <span className="shrink-0 text-gold-dark">{isOpen ? <Minus size={20} /> : <Plus size={20} />}</span>
                 </button>
                 <AnimatePresence initial={false}>
                   {isOpen && (
@@ -39,7 +39,7 @@ export default function FAQ() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <p className="px-5 sm:px-6 pb-6 text-white/65 text-sm leading-relaxed">{faq.a}</p>
+                      <p className="px-5 sm:px-6 pb-6 text-ink/65 text-sm leading-relaxed">{faq.a}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>

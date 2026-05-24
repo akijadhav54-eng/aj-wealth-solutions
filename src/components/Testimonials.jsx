@@ -20,7 +20,7 @@ export default function Testimonials() {
   const item = testimonials[index]
 
   return (
-    <section id="testimonials" className="bg-navy-900/60">
+    <section id="testimonials" className="bg-cream">
       <div className="section">
         <Reveal className="text-center max-w-2xl mx-auto">
           <span className="eyebrow">Client Reviews</span>
@@ -31,19 +31,19 @@ export default function Testimonials() {
 
         <Reveal delay={0.1}>
           <div className="relative max-w-3xl mx-auto mt-12">
-            <div className="rounded-3xl bg-navy-700/50 ring-1 ring-white/10 p-8 sm:p-12 text-center">
+            <div className="rounded-3xl bg-white ring-1 ring-ink/10 p-8 sm:p-12 text-center">
               <Quote className="mx-auto text-gold/60" size={40} />
-              <p className="font-display text-lg sm:text-2xl text-white/90 leading-relaxed mt-6 italic">
+              <p className="font-display text-lg sm:text-2xl text-ink/90 leading-relaxed mt-6 italic">
                 “{item.text}”
               </p>
               <div className="flex justify-center gap-1 mt-6">
                 {Array.from({ length: item.rating }).map((_, i) => (
-                  <Star key={i} size={18} className="fill-gold text-gold" />
+                  <Star key={i} size={18} className="fill-gold text-gold-dark" />
                 ))}
               </div>
               <div className="mt-4">
-                <span className="font-semibold text-white">{item.name}</span>
-                <span className="text-white/50 text-sm"> · {item.location}</span>
+                <span className="font-semibold text-ink">{item.name}</span>
+                <span className="text-ink/50 text-sm"> · {item.location}</span>
               </div>
             </div>
 
@@ -51,14 +51,14 @@ export default function Testimonials() {
             <button
               onClick={prev}
               aria-label="Previous review"
-              className="absolute -left-2 sm:-left-5 top-1/2 -translate-y-1/2 h-11 w-11 rounded-full bg-navy-600 ring-1 ring-white/10 text-white flex items-center justify-center hover:bg-gold hover:text-navy-900 transition-colors"
+              className="absolute -left-2 sm:-left-5 top-1/2 -translate-y-1/2 h-11 w-11 rounded-full bg-white ring-1 ring-ink/10 text-ink flex items-center justify-center hover:bg-gold hover:text-navy-900 transition-colors"
             >
               <ChevronLeft size={20} />
             </button>
             <button
               onClick={next}
               aria-label="Next review"
-              className="absolute -right-2 sm:-right-5 top-1/2 -translate-y-1/2 h-11 w-11 rounded-full bg-navy-600 ring-1 ring-white/10 text-white flex items-center justify-center hover:bg-gold hover:text-navy-900 transition-colors"
+              className="absolute -right-2 sm:-right-5 top-1/2 -translate-y-1/2 h-11 w-11 rounded-full bg-white ring-1 ring-ink/10 text-ink flex items-center justify-center hover:bg-gold hover:text-navy-900 transition-colors"
             >
               <ChevronRight size={20} />
             </button>
@@ -71,7 +71,7 @@ export default function Testimonials() {
                   onClick={() => setIndex(i)}
                   aria-label={`Go to review ${i + 1}`}
                   className={`h-2 rounded-full transition-all ${
-                    i === index ? 'w-7 bg-gold' : 'w-2 bg-white/25'
+                    i === index ? 'w-7 bg-gold' : 'w-2 bg-ink/25'
                   }`}
                 />
               ))}

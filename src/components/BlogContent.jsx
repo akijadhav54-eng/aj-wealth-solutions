@@ -43,13 +43,13 @@ export default function BlogContent({ content }) {
     <div className="space-y-5">
       {blocks.map((b, i) => {
         if (b.type === 'h2')
-          return <h2 key={i} className="font-display text-2xl text-white pt-4">{b.text}</h2>
+          return <h2 key={i} className="font-display text-2xl text-ink pt-4">{b.text}</h2>
         if (b.type === 'ul')
           return (
             <ul key={i} className="space-y-2 pl-1">
               {b.items.map((it, j) => (
-                <li key={j} className="flex gap-3 text-white/75 leading-relaxed">
-                  <span className="text-gold mt-1.5 shrink-0">•</span>
+                <li key={j} className="flex gap-3 text-ink/75 leading-relaxed">
+                  <span className="text-gold-dark mt-1.5 shrink-0">•</span>
                   <span>{it}</span>
                 </li>
               ))}
@@ -57,13 +57,13 @@ export default function BlogContent({ content }) {
           )
         if (b.type === 'tip')
           return (
-            <div key={i} className="rounded-xl bg-gold/10 ring-1 ring-gold/30 px-5 py-4 text-white/85 italic">
+            <div key={i} className="rounded-xl bg-gold/10 ring-1 ring-gold/30 px-5 py-4 text-ink/85 italic">
               {b.text}
             </div>
           )
         if (b.type === 'note')
-          return <p key={i} className="text-xs text-white/40 italic pt-4 border-t border-white/10">{b.text}</p>
-        return <p key={i} className="text-white/75 leading-relaxed">{b.text}</p>
+          return <p key={i} className="text-xs text-ink/40 italic pt-4 border-t border-ink/10">{b.text}</p>
+        return <p key={i} className="text-ink/75 leading-relaxed">{b.text}</p>
       })}
     </div>
   )
