@@ -20,7 +20,8 @@ export default {
           light: '#e3bd5a',
           dark: '#a87f1e',
         },
-        cream: '#f7f5ef', // warm off-white for light sections
+        cream: '#f7f5ef', // warm off-white page background
+        ink: '#10133a', // deep-navy text color for the light theme
       },
       fontFamily: {
         // Distinctive luxury pairing (loaded in index.html)
