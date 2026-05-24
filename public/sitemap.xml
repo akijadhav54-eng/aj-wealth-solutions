@@ -2,5 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://ajwealthsolutions.vercel.app/</loc><priority>1.0</priority></url>
   <url><loc>https://ajwealthsolutions.vercel.app/services</loc><priority>0.8</priority></url>
+  <url><loc>https://ajwealthsolutions.vercel.app/blog</loc><priority>0.8</priority></url>
+  <url><loc>https://ajwealthsolutions.vercel.app/blog/why-start-sip-early</loc><priority>0.7</priority></url>
+  <url><loc>https://ajwealthsolutions.vercel.app/blog/elss-vs-ppf-tax-saving</loc><priority>0.7</priority></url>
+  <url><loc>https://ajwealthsolutions.vercel.app/blog/5-money-habits-build-wealth</loc><priority>0.7</priority></url>
   <url><loc>https://ajwealthsolutions.vercel.app/contact</loc><priority>0.8</priority></url>
 </urlset>

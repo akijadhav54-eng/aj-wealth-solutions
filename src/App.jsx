@@ -8,6 +8,8 @@ import FloatingButtons from './components/FloatingButtons'
 import Home from './pages/Home'
 import ServicesPage from './pages/ServicesPage'
 import Contact from './pages/Contact'
+import Blog from './pages/Blog'
+import BlogPost from './pages/BlogPost'
 
 // Scrolls to the top whenever the route changes (better UX on navigation)
 function ScrollToTop() {
@@ -27,6 +29,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
