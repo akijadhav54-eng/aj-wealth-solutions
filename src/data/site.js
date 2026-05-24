@@ -32,7 +32,7 @@ export const site = {
     facebook: '',
     linkedin: 'https://www.linkedin.com/in/akash-jaddhav-4a23b01ab?utm_source=share_via&utm_content=profile&utm_medium=member_android',
     youtube: 'https://www.youtube.com/@AJ_Wealth_Solutions',
-    twitter: 'https://x.com/akijadhav54',
+    twitter: 'https://x.com/akijadhav54'
   },
 
   // ----- LEAD FORM ENDPOINT -----
