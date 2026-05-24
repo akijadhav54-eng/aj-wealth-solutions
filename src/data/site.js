@@ -28,18 +28,18 @@ export const site = {
 
   // ----- Social links (leave '' to hide an icon) -----
   social: {
-    instagram: 'https://www.instagram.com/akijadhav01?igsh=MTV6bXNpNGxycmh4Yw==',
+    instagram: '',
     facebook: '',
-    linkedin: 'https://www.linkedin.com/in/akash-jaddhav-4a23b01ab?utm_source=share_via&utm_content=profile&utm_medium=member_android',
-    youtube: 'https://www.youtube.com/@AJ_Wealth_Solutions',
-    twitter: 'https://x.com/akijadhav54'
+    linkedin: '',
+    youtube: '',
+    twitter: '',
   },
 
   // ----- LEAD FORM ENDPOINT -----
   // 1. Go to https://formspree.io and create a free account.
   // 2. Create a new form -> copy the endpoint (looks like https://formspree.io/f/abcdwxyz).
   // 3. Paste it below. Leads will arrive in your email + Formspree dashboard.
-  formspreeEndpoint: 'https://formspree.io/f/mjgzoddg',
+  formspreeEndpoint: 'https://formspree.io/f/REPLACE_WITH_YOUR_ID',
 
   // Digital / platform partner shown in footer
   partner: 'AssetPlus',

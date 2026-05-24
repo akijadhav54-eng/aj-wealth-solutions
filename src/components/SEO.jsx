@@ -3,7 +3,7 @@
 import { Helmet } from 'react-helmet-async'
 
 export default function SEO({ title, description, path = '' }) {
-  const url = `https://ajwealthsolutions.vercel.app${path}`
+  const url = `https://ajwealthsolutions.in${path}`
   return (
     <Helmet>
       <title>{title}</title>
